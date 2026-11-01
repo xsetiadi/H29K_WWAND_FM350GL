@@ -77,6 +77,24 @@ Because this is a custom build, OpenWrt's package manager will show a warning du
 
 ---
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/46aa49aa-c2f7-4056-9a7d-549dcc5a5e9d" width="32%" />
+  <img src="https://github.com/user-attachments/assets/9a2431c2-4f9e-4507-a2f6-c9ac1f6fac7b" width="32%" />
+  <img src="https://github.com/user-attachments/assets/d4a9c70c-7b94-4011-ad4e-60e1aa85cf60" width="32%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7c81648a-edd8-48cf-9647-af9ec34f8caa" width="32%" />
+  <img src="https://github.com/user-attachments/assets/4e694517-2fcf-4af6-834b-10804db5c1f4" width="32%" />
+  <img src="https://github.com/user-attachments/assets/45249187-5333-449a-b331-8b5758673883" width="32%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9c76cdff-058d-44d8-9625-001661dfd4cc" width="32%" />
+  <img src="https://github.com/user-attachments/assets/e6d77321-d43e-4ea2-8c80-218e00125725" width="32%" />
+  <img src="https://github.com/user-attachments/assets/3a1522d5-da53-4ad0-beb1-372342ee303b" width="32%" />
+</p>
+
 ## 🙏 Credits & Acknowledgements
 
 This project wouldn't exist without the hard work of the open-source community:
