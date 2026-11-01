@@ -1,0 +1,75 @@
+
+config smartdns
+	option enabled '1'
+	option auto_set_dnsmasq '1'
+	option tcp_server '1'
+	option ipv6_server '1'
+	option bind_device '1'
+	option dualstack_ip_selection '1'
+	option serve_expired '1'
+	option cache_persist '1'
+	option resolve_local_hostnames '1'
+	option force_https_soa '1'
+	option seconddns_tcp_server '1'
+	option port '6053'
+	option old_port '6053'
+	option old_enabled '1'
+	option old_auto_set_dnsmasq '1'
+
+config domain-rule
+
+config client-rule
+
+config ip-rule
+
+config server
+	option enabled '1'
+	option name '腾讯DNS'
+	option ip '119.29.29.29'
+
+config server
+	option enabled '1'
+	option name '阿里DNS'
+	option ip '223.5.5.5'
+
+config server
+	option enabled '1'
+	option name '腾讯DNS HTTPS'
+	option ip 'https://doh.pub/dns-query'
+	option type 'https'
+
+config server
+	option enabled '1'
+	option name '百度DNS'
+	option ip '180.76.76.76'
+
+config server
+	option enabled '1'
+	option name '114 DNS'
+	option ip '114.114.114.114'
+
+config server
+	option enabled '1'
+	option name 'CloudFlare DNS'
+	option ip '1.1.1.1'
+
+config server
+	option enabled '1'
+	option name 'Google DNS'
+	option ip '8.8.8.8'
+
+config server
+	option enabled '1'
+	option name '中国互联网络信息中心DNS'
+	option ip '1.2.4.8'
+
+config server
+	option enabled '1'
+	option name '阿里DNS IPv6'
+	option ip '2400:3200::1'
+
+config server
+	option enabled '1'
+	option name '腾讯DNS IPv6'
+	option ip '2402:4e00::'
+

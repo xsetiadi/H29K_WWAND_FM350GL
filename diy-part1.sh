@@ -6,8 +6,8 @@
 set -euo pipefail  # 严格报错模式：任一非条件命令失败立即终止
 
 # === 1. 软件源配置 ===
-# 添加 QModem 软件源
-echo 'src-git qmodem https://github.com/FUjr/QModem.git;main' >> feeds.conf.default
+# Add wwand feed
+echo 'src-git wwand https://github.com/ddimension/openwrt-repo.git;stable' >> feeds.conf.default
 
 # === 2. 安装 argon 主题
 # git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
@@ -81,10 +81,6 @@ download_and_check "${BASE_URL}/JPG/99-bootanim" "files/etc/init.d/99-bootanim"
 download_and_check "${BASE_URL}/JPG/drm_play_arm64" "files/usr/sbin/drm_play_arm64"
 download_and_check "${BASE_URL}/fonts/MiSans-Regular.ttf" "files/usr/share/fonts/MiSans-Regular.ttf"
 download_and_check "${BASE_URL}/JPG/once-enable-bootanim" "files/etc/uci-defaults/once-enable-bootanim"
-download_and_check "${BASE_URL}/qmodem/fibocom.sh" "files/usr/share/qmodem/vendor/fibocom.sh"
-download_and_check "${BASE_URL}/qmodem/misectel_led.sh" "files/usr/share/qmodem/led_scripts/misectel_led.sh"
-download_and_check "${BASE_URL}/qmodem/qmodem_init" "files/etc/init.d/qmodem_init"
-download_and_check "${BASE_URL}/qmodem/qmodem_led" "files/etc/config/qmodem_led"
 download_and_check "${BASE_URL}/package/kernel/axs5106/Makefile" "package/kernel/axs5106/Makefile"
 download_and_check "${BASE_URL}/package/kernel/axs5106/src/Makefile" "package/kernel/axs5106/src/Makefile"
 download_and_check "${BASE_URL}/package/kernel/axs5106/src/chipone_axs5106.c" "package/kernel/axs5106/src/chipone_axs5106.c"
@@ -341,3 +337,6 @@ CONFIG_NETFILTER_EGRESS=y
 
 EOF
 echo "✅ H29K 内核参数注入完成"
+# Patch DTS for eMMC stability (Disable HS200 and lower clock to 50MHz)
+sed -i 's/mmc-hs200-1_8v;//g' target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-hinlink-h29k.dts
+sed -i 's/max-frequency = <150000000>;/max-frequency = <50000000>;/g' target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-hinlink-h29k.dts
