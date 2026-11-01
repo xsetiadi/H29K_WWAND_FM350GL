@@ -15,6 +15,9 @@ echo 'src-git wwand https://github.com/ddimension/openwrt-repo.git;stable' >> fe
 # === 3. 安装 glass 主题（原作者停更了）
 git clone https://github.com/I-agree/luci-theme-glass.git package/luci-theme-glass
 
+# Overwrite the Chinese Jelly Bun with our English translation
+cp custom-files/jelly-bun-widget.js package/luci-theme-glass/htdocs/luci-static/glass/js/jelly-bun-widget.js
+
 # ======================== 【统一下载与文件校验中心】 ========================
 echo "📥 开始统一拉取 H29K 编译所需的核心外置资源..."
 
