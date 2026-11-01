@@ -41,6 +41,17 @@ If you are using a different modem, it may work, but it has not been explicitly 
 
 ---
 
+## 🏗️ System Base (OpenWrt Snapshot)
+
+This firmware is built on the **OpenWrt SNAPSHOT** branch (Kernel 6.18). It uses the bleeding-edge `apk` package manager (replacing the older `opkg`).
+
+**Why Snapshot?**
+*   **Latest Hardware Support:** Needed for the RK3528 chip and the latest H29K kernel patches.
+*   **Modern Package Manager:** `apk` is the future of OpenWrt and is required for the latest `wwand` builds.
+*   **Note on Stability:** Because this tracks the OpenWrt development branch, it receives the newest features but may occasionally experience minor upstream bugs compared to a "Stable" release.
+
+---
+
 ## ⚠️ 🚨 IMPORTANT: First Boot Instructions
 
 Because this is a custom build, OpenWrt's package manager will show a warning during `apk update` regarding a broken `wwand` feed URL. 
