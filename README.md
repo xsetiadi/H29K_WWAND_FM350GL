@@ -17,18 +17,25 @@ If you are using a 5G module (like the FM350-GL) on the H29K, **wwand** is a mas
 
 ---
 
-## 📡 A Note on Modem Compatibility
+## 📡 Modem Compatibility (Powered by wwand)
 
-`wwand` is a relatively new project compared to long-standing tools like ModemManager or QModem. Because it is under active development, its hardware support list is currently focused on specific, well-tested modules rather than being universally compatible with everything on the market.
+`wwand` is highly mature and has been production-tested across a wide variety of hardware, spanning MBIM, QMI, NCM, and PCIe/MHI protocols. It handles complex features like 5G SA/NSA (ENDC), eUICC (eSIM), and remote SIMs.
 
-Currently supported and tested modules include:
-*   **Fibocom FM350-GL** (This build is heavily tested with this module)
-*   Quectel RG650E
-*   Quectel EG06
-*   MeiG SLM770A
-*   Zyxel NR7101
+**Specifically Tested Modems Include:**
+*   **Fibocom:** FM350-GL *(Our primary target, tested natively via MBIM & eUICC)*
+*   **Quectel:** RG650E, RM520N, RG502Q, EG06, RG520N-EB, BG96 *(LTE Cat-M)*
+*   **MeiG:** SLM770A
+*   **Huawei:** E392
+*   **Foxconn (Snapdragon X62):** T99W373 *(Tested via PCIe/MHI on x86_64)*
 
-If you are using a different modem, it may work, but it has not been explicitly verified by the developer. The FM350-GL is the primary target for this H29K build.
+**Tested Hardware & Routers:**
+*   MikroTik Chateau 5G
+*   Zyxel NR7101 & LTE3301-M209
+*   Cudy LT300
+*   GL.iNet X3000
+*   Dell DW5931e / DW5932e (in HP EliteBook laptops)
+
+*Note: Because `wwand` uses standard AT commands and native Linux datapaths, it is highly likely to work with many other unlisted modems. However, the hardware listed above is what the developer has explicitly verified in production environments.*
 
 ---
 
