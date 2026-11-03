@@ -341,3 +341,5 @@ echo "✅ H29K 内核参数注入完成"
 # Patch DTS for eMMC stability (Disable HS200 and lower clock to 50MHz)
 sed -i 's/mmc-hs200-1_8v;//g' target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-hinlink-h29k.dts
 sed -i 's/max-frequency = <150000000>;/max-frequency = <50000000>;/g' target/linux/rockchip/files/arch/arm64/boot/dts/rockchip/rk3528-hinlink-h29k.dts
+# Fix the hardcoded /workdir path for local builds
+sed -i "s|/workdir/openwrt|$PWD|g" target/linux/rockchip/armv8/config-6.18
