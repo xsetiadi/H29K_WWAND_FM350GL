@@ -51,3 +51,6 @@ chmod +x files/etc/uci-defaults/once-enable-bootanim
 # ==============================================================
 
 echo "🚀 H29K专用代码已经准备就绪，即将开始正式编译！"
+# Remove all Chinese translations to save space
+find feeds/luci -type d -name "zh-cn" -exec rm -rf {} +
+find feeds/luci -type f -name "*zh-cn*" -delete
